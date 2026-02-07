@@ -1,0 +1,107 @@
+/* Page wrapper */
+.news-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+/* Banner */
+.news-banner {
+  height: 260px;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("/banner.jpg"); /* optional */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.news-banner-content {
+  color: #fff;
+  padding-left: 80px;
+}
+
+.news-banner-content h1 {
+  font-size: 40px;
+  margin-bottom: 8px;
+}
+
+.news-banner-content p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* Section spacing */
+.news-section {
+  padding: 60px 80px;
+}
+
+/* 🔥 GRID FIX HERE */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 32px;
+}
+
+/* Card */
+.news-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #222;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Image wrapper */
+.news-image {
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+
+.news-image img {
+  object-fit: cover;
+}
+
+/* Title */
+.news-title {
+  padding: 16px 18px 20px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 1024px) {
+  .news-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .news-section {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .news-grid {
+    grid-template-columns: 1fr; /* 1 per row on mobile */
+  }
+
+  .news-banner-content {
+    padding-left: 24px;
+  }
+
+  .news-section {
+    padding: 24px;
+  }
+}

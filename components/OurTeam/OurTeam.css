@@ -1,0 +1,82 @@
+.person-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 0 20px;
+}
+
+/* Reverse layout */
+.person-section.reverse {
+  flex-direction: row-reverse;
+}
+
+/* TEXT */
+.person-text {
+  flex: 1;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* TITLE */
+.person-title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* Title lines */
+.person-title::before,
+.person-title::after {
+  content: "";
+  width: 80px;
+  height: 2px;
+  background: #1a73b8;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 12px;
+}
+
+/* NAME */
+.person-name {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* IMAGE */
+.person-image {
+  flex: 0 0 340px;
+  border: 1px solid #e5e5e5;
+  padding: 10px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* IMPORTANT for next/image */
+.person-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .person-section,
+  .person-section.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .person-image {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
